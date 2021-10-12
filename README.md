@@ -27,7 +27,7 @@ git clone git@github.com:sinansevgi/best-sellers-catalog.git
 npm install 
 ```
 
-- **In order to use this application you need to have NY Times books API key. Please follow below instructions to get an api key**
+- **In order to use this application you need to have NY Times books API key. Please follow the below instructions to get an API key**
 > - Create NY Times Developer account from [this link](https://developer.nytimes.com/accounts/create).
 > - Login to your account.
 > - Select My Apps from the user drop-down.
@@ -39,11 +39,11 @@ npm install
 > - View the API key on the App Details tab.
 > - Confirm that the status of the API key is Approved.
 
-- Once you get your api key create file name `.env` in project root folder.
+- Once you get your API key create a file named `.env` in the project's root folder.
 ```bash
 touch .env
 ```
-- Paste below statement with your api key placed in specified location.
+- Paste the below statement to the newly created `.env` file with your API key placed in the specified location.
 ```
 REACT_APP_ACCESS_TOKEN='REPLACE_WITH_YOUR_API_KEY'
 ```

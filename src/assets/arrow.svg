@@ -1,0 +1,10 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30">
+	<title>4</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #ffffff } 
+	</style>
+	<g id="4">
+		<path id="arrow" class="shp0" d="M15 30C23.28 30 30 23.28 30 15C30 6.72 23.28 0 15 0C6.72 0 0 6.72 0 15C0 23.28 6.72 30 15 30ZM15 2.34C21.99 2.34 27.66 8.01 27.66 15C27.66 21.99 21.99 27.66 15 27.66C8.01 27.66 2.34 21.99 2.34 15C2.34 8.01 8.01 2.34 15 2.34ZM7.5 15.94L19.13 15.94L16.88 18.35L18.13 19.69L22.5 15L18.13 10.31L16.88 11.65L19.13 14.06L7.5 14.06L7.5 15.94Z" />
+	</g>
+</svg>

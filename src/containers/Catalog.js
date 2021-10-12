@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import Book from '../components/Book';
+import '../assets/Catalog.css';
+import arrow from '../assets/arrow.svg';
 
 const Catalog = ({ books }) => {
   const [bookFilter, setBookFilter] = useState('');
@@ -11,6 +13,7 @@ const Catalog = ({ books }) => {
       to={`/details/${book.primary_isbn13}`}
       key={book.primary_isbn13}
     >
+      <img src={arrow} alt="arrow" />
       <Book
         title={book.title}
         isbn={book.primary_isbn13}
@@ -30,9 +33,12 @@ const Catalog = ({ books }) => {
   }, [bookFilter]);
 
   return (
-    <section>
-      <input type="text" placeholder="Filter books by name" value={bookFilter} onChange={handleChange} />
-      {bookFilter ? listify(filteredBooks) : listify(books)}
+    <section className="container">
+      <input type="text" placeholder="Filter books by name" value={bookFilter} onChange={handleChange} className="search-box" />
+      <div><h2>Hardcover Fiction Best Sellers</h2></div>
+      <div className="catalog">
+        {bookFilter ? listify(filteredBooks) : listify(books)}
+      </div>
     </section>
   );
 };

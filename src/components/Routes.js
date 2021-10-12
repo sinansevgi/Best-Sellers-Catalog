@@ -4,12 +4,13 @@ import { useEffect } from 'react';
 import Catalog from '../containers/Catalog';
 import BookDetails from '../containers/BookDetails';
 import { fetchBookList } from '../store/bookListSlice';
+import getBooks from '../api/getBooks';
 
 const Routes = () => {
   const { bookList } = useSelector((state) => state);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchBookList());
+    dispatch(fetchBookList(getBooks));
   }, []);
   return (
     <Switch>

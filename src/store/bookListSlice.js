@@ -1,8 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import getBooks from '../api/getBooks';
 
-export const fetchBookList = createAsyncThunk('bookList/fetchBookList', async () => {
-  const response = await getBooks();
+export const fetchBookList = createAsyncThunk('bookList/fetchBookList', async (apiGateway) => {
+  const response = await apiGateway();
   return response;
 });
 

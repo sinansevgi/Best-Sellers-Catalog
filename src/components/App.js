@@ -1,5 +1,6 @@
 import '../assets/App.css';
 import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
 import Navbar from './Navbar';
 import Routes from './Routes';
 import store from '../store/store';
@@ -7,10 +8,12 @@ import store from '../store/store';
 const App = () => (
 
   <Provider store={store}>
-    <div className="App">
-      <Navbar />
-      <Routes />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Navbar />
+        <Routes />
+      </div>
+    </BrowserRouter>
   </Provider>
 
 );

@@ -1,10 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Redirect } from 'react-router-dom';
 
 const Details = ({ book }) => {
   if (!book) {
     return (
-      <h2>Please do not use direct links.</h2>
+      <div>
+        <h2>Please do not use direct links.</h2>
+        <Redirect to="/" />
+      </div>
     );
   }
   return (

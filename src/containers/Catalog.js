@@ -1,15 +1,10 @@
-import React, { useState } from 'react';
-// import PropTypes from 'prop-types';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import Book from '../components/Book';
-import mockBooks from '../components/mockBooks';
 
-const Catalog = () => {
-  const [testBooks, setTestBooks] = useState(mockBooks);
-  const handleChange = () => {
-    setTestBooks(['Test']);
-  };
-  const book = testBooks.map((book) => (
+const Catalog = ({ books }) => {
+  const book = books.map((book) => (
     <Link
       to={`/details/${book.primary_isbn13}`}
       key={book.primary_isbn13}
@@ -17,7 +12,6 @@ const Catalog = () => {
       <Book
         title={book.title}
         isbn={book.primary_isbn13}
-        onClick={handleChange}
       />
     </Link>
   ));
@@ -28,8 +22,8 @@ const Catalog = () => {
   );
 };
 
-// Catalog.propTypes = {
-//
-// };
+Catalog.propTypes = {
+  books: PropTypes.instanceOf(Object).isRequired,
+};
 
 export default Catalog;

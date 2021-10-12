@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import Book from '../components/Book';
 
 const Catalog = ({ books }) => {
-  const book = books.map((book) => (
+  const [bookFilter, setBookFilter] = useState('');
+  const [filteredBooks, setFilteredBooks] = useState([]);
+  const listify = (list) => list.map((book) => (
     <Link
       to={`/details/${book.primary_isbn13}`}
       key={book.primary_isbn13}
@@ -15,10 +17,23 @@ const Catalog = ({ books }) => {
       />
     </Link>
   ));
+
+  const handleChange = ({ target }) => {
+    setBookFilter(target.value);
+  };
+
+  useEffect(() => {
+    const filteredResult = books.filter(
+      (book) => book.title.toLowerCase().includes(bookFilter.toLowerCase()),
+    );
+    setFilteredBooks(filteredResult);
+  }, [bookFilter]);
+
   return (
-    <div>
-      {book}
-    </div>
+    <section>
+      <input type="text" placeholder="Filter books by name" value={bookFilter} onChange={handleChange} />
+      {bookFilter ? listify(filteredBooks) : listify(books)}
+    </section>
   );
 };
 

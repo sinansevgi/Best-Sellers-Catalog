@@ -35,7 +35,7 @@ npm install
 > - Enter a name and description for the app in the New App dialog.
 > - Click Create.
 > - Click the APIs tab.
-> - Click the access toggle to enable or disable access to th Book API from the app.
+> - Click the access toggle to enable or disable access to the Book API from the app.
 > - View the API key on the App Details tab.
 > - Confirm that the status of the API key is Approved.
 

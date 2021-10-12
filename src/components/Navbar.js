@@ -6,7 +6,7 @@ import settingsIcon from '../assets/settings.svg';
 
 const Navbar = () => (
   <div className={navbarStyles.navbar}>
-    <Link to="/"><img src={backArrow} alt="" /></Link>
+    <Link to="/"><img src={backArrow} alt="Back" /></Link>
     <h1>The New York Times Best Sellers</h1>
     <img src={settingsIcon} alt="" />
 

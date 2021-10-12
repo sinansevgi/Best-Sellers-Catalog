@@ -11,7 +11,7 @@ const Routes = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchBookList(getBooks));
-  }, []);
+  }, [dispatch]);
   return (
     <Switch>
       <Route path="/details/:isbn">

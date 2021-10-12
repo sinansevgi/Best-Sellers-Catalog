@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# New York Times Best Sellers Catalog
+This simple react-redux app fetches this month's NY Times bestseller list and lets you filter it by name.
+You can also click on books and see the details about the book.
+
+![Screenshot](Screenshot.png)
+
+## Built With
+
+- ReactJS
+- Javascript
+- Redux
+- Redux Toolkit
+
+## Getting Started
+
+In order to run this app on your local environment:
+
+- Clone the project on your local machine with the following command.
+
+```bash 
+git clone git@github.com:sinansevgi/best-sellers-catalog.git
+```
+
+- Navigate to the project directory
+- Run following command to install dependencies
+```bash 
+npm install 
+```
+
+- **In order to use this application you need to have NY Times books API key. Please follow below instructions to get an api key**
+> - Create NY Times Developer account from [this link](https://developer.nytimes.com/accounts/create).
+> - Login to your account.
+> - Select My Apps from the user drop-down.
+> - Click + New App to create a new app.
+> - Enter a name and description for the app in the New App dialog.
+> - Click Create.
+> - Click the APIs tab.
+> - Click the access toggle to enable or disable access to th Book API from the app.
+> - View the API key on the App Details tab.
+> - Confirm that the status of the API key is Approved.
+
+- Once you get your api key create file name `.env` in project root folder.
+```bash
+touch .env
+```
+- Paste below statement with your api key placed in specified location.
+```
+REACT_APP_ACCESS_TOKEN='REPLACE_WITH_YOUR_API_KEY'
+```
+
+- You can run the app with the following command.
+```bash 
+npm run start
+```
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Live Demo Link
 
-In the project directory, you can run:
+You can use [this link](https://agitated-pare-3b3254.netlify.app/) to access the demo version of this app.
 
-### `npm start`
+## Authors
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+👤 **Sinan Sevgi**
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- GitHub: [@sinansevgi](https://github.com/sinansevgi)
+- LinkedIn: [@sinansevgi](https://www.linkedin.com/in/sinansevgi/)
+- Portfolio: [Website](https://sinansevgi.com)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🤝 Contributing
 
-### `npm run build`
+Contributions, issues, and feature requests are welcome!
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Feel free to check the [issues page](../../issues/).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Show your support
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Give a ⭐️ if you like this project!
 
-### `npm run eject`
+## Acknowledgments
+- Book covers taken from the [Open Library cover API](https://openlibrary.org/dev/docs/api/covers)
+- Best Seller list fetched from the [New York Times Book API](https://developer.nytimes.com/docs/books-product/1/overview)
+- Design idea by [Nelson Sakwa on Behance](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs))
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 📝 License
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is [MIT](./LICENSE) licensed.

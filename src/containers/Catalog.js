@@ -30,7 +30,7 @@ const Catalog = ({ books }) => {
       (book) => book.title.toLowerCase().includes(bookFilter.toLowerCase()),
     );
     setFilteredBooks(filteredResult);
-  }, [bookFilter]);
+  }, [bookFilter, books]);
 
   return (
     <section className="container">

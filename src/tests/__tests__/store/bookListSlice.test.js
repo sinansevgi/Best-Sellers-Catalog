@@ -1,4 +1,4 @@
-import reducers from '../../store/bookListSlice';
+import reducers from '../../../store/bookListSlice';
 
 describe('Redux store tests', () => {
   test('Init Test', () => {

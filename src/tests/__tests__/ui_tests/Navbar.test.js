@@ -1,10 +1,11 @@
 import renderer from 'react-test-renderer';
-import App from '../../components/App';
+import { BrowserRouter } from 'react-router-dom';
+import Navbar from '../../../components/Navbar';
 
 describe('The app component', () => {
   it('should match with snapshot', () => {
     const componentTree = renderer
-      .create(<App />)
+      .create(<BrowserRouter><Navbar /></BrowserRouter>)
       .toJSON();
     expect(componentTree).toMatchSnapshot();
   });

@@ -1,13 +1,10 @@
 import renderer from 'react-test-renderer';
-import mockBooks from '../../__mocks__/mockBooks';
-import Details from '../../components/Details';
-
-const testBook = mockBooks[0];
+import App from '../../../components/App';
 
 describe('The app component', () => {
   it('should match with snapshot', () => {
     const componentTree = renderer
-      .create(<Details book={testBook} />)
+      .create(<App />)
       .toJSON();
     expect(componentTree).toMatchSnapshot();
   });

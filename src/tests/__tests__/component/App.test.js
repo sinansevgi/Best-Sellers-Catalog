@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
-import App from '../../components/App';
+import '@testing-library/jest-dom';
+import App from '../../../components/App';
 
 describe('Test App Component', () => {
   beforeEach(() => {
@@ -8,9 +9,9 @@ describe('Test App Component', () => {
     );
   });
   test('Navbar should render successfully', () => {
-    expect(screen.getByText('The New York Times Best Sellers'));
+    expect(screen.getByText('The New York Times Best Sellers')).toBeInTheDocument();
   });
   test('Catalog should render successfully', () => {
-    expect(screen.getByText('Hardcover Fiction Best Sellers'));
+    expect(screen.getByText('Hardcover Fiction Best Sellers')).toBeInTheDocument();
   });
 });

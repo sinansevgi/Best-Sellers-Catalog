@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
-import Book from '../../components/Book';
-import mockBooks from '../../__mocks__/mockBooks';
+import '@testing-library/jest-dom';
+import Book from '../../../components/Book';
+import mockBooks from '../../mockObjects/mockBooks';
 
 describe('Test Book Component', () => {
   beforeEach(() => {
@@ -9,9 +10,9 @@ describe('Test Book Component', () => {
     );
   });
   test('It should display book cover', () => {
-    expect(screen.getByAltText('Book Cover'));
+    expect(screen.getByAltText('Book Cover')).toBeInTheDocument();
   });
   test('Book title should get rendered', () => {
-    expect(screen.getByText(mockBooks[0].title));
+    expect(screen.getByText(mockBooks[0].title)).toBeInTheDocument();
   });
 });

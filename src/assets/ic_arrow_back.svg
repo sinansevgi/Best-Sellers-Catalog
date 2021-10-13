@@ -1,0 +1,10 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 27" width="16" height="27">
+	<title>nav</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #ffffff } 
+	</style>
+	<g id="nav">
+		<path id="ic_arrow_back" class="shp0" d="M13.22 0L-0.01 13.49L13.23 27L16.01 24.17L5.55 13.49L16 2.84L13.22 0" />
+	</g>
+</svg>

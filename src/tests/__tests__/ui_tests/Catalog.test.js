@@ -1,7 +1,7 @@
 import renderer from 'react-test-renderer';
 import { BrowserRouter } from 'react-router-dom';
 import mockBooks from '../../mockObjects/mockBooks';
-import Catalog from '../../../containers/Catalog';
+import Catalog from '../../../components/Catalog';
 
 describe('The catalog component', () => {
   it('should match with snapshot', () => {

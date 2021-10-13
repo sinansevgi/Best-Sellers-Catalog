@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import Book from '../components/Book';
+import Book from './Book';
 import '../assets/Catalog.css';
 import arrow from '../assets/arrow.svg';
+import Filter from './Filter';
 
 const Catalog = ({ books }) => {
   const [bookFilter, setBookFilter] = useState('');
@@ -21,8 +22,8 @@ const Catalog = ({ books }) => {
     </Link>
   ));
 
-  const handleChange = ({ target }) => {
-    setBookFilter(target.value);
+  const handleChange = (newValue) => {
+    setBookFilter(newValue);
   };
 
   useEffect(() => {
@@ -34,7 +35,7 @@ const Catalog = ({ books }) => {
 
   return (
     <section className="container">
-      <input type="text" placeholder="Filter books by name" value={bookFilter} onChange={handleChange} className="search-box" />
+      <Filter changeHandler={handleChange} value={bookFilter} />
       <div><h2>Hardcover Fiction Best Sellers</h2></div>
       <div className="catalog">
         {bookFilter ? listify(filteredBooks) : listify(books)}

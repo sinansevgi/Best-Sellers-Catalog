@@ -1,5 +1,5 @@
 import renderer from 'react-test-renderer';
-import App from '../../../components/App';
+import App from '../../../containers/App';
 
 describe('The app component', () => {
   it('should match with snapshot', () => {
